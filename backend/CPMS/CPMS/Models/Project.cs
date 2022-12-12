@@ -12,6 +12,7 @@ namespace CPMS.Models
         public int Id { get; set; }
 
         [Required, MaxLength(30)]
+        [Column(TypeName = "varchar(30)")]
         public string Name { get; set; }
 
         [Required]
@@ -23,23 +24,23 @@ namespace CPMS.Models
         public DateTime EndDate { get; set; }
 
         [Required, MaxLength(100)]
+        [Column(TypeName = "varchar(100)")]
         public string Technology { get; set; }
 
-        [Required]
-        [DataType(DataType.MultilineText)]
+        [Required]       
+        [Column(TypeName = "varchar(1000)")]
         public string FRequirement { get; set; }
 
         [Required]
-        [DataType(DataType.MultilineText)]
+        [Column(TypeName = "varchar(1000)")]
         public string NFRequirement { get; set; }
 
         [Required]
         public long Budget { get; set; }
 
-        
- /*       [ForeignKey("ClientId")]
-        public Client _Client { get; set; }
-        public int? ClientId { get; set; }*/
+
+        [Column(TypeName = "varchar(12)")]
+        public string Status { get; set; }
 
         public List<Client_Project> Client_Projects { get; set; }
         public List<Team> Teams { get; set; }

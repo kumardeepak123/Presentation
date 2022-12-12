@@ -4,14 +4,16 @@ using CPMS.DBConnect;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CPMS.Migrations
 {
     [DbContext(typeof(CPMDbContext))]
-    partial class CPMDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221212112743_first")]
+    partial class first
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace CPMS.Migrations
                         .HasMaxLength(100);
 
                     b.Property<string>("Email")
-                        .HasColumnType("varchar(30)")
+                        .HasColumnType("varchar(15)")
                         .HasMaxLength(30);
 
                     b.Property<string>("Name")
@@ -92,7 +94,7 @@ namespace CPMS.Migrations
                         .HasMaxLength(30);
 
                     b.Property<string>("Email")
-                        .HasColumnType("varchar(30)")
+                        .HasColumnType("varchar(15)")
                         .HasMaxLength(30);
 
                     b.Property<string>("Name")
@@ -127,16 +129,14 @@ namespace CPMS.Migrations
                     b.Property<DateTime>("EndDate");
 
                     b.Property<string>("FRequirement")
-                        .IsRequired()
-                        .HasColumnType("varchar(1000)");
+                        .IsRequired();
 
                     b.Property<string>("NFRequirement")
-                        .IsRequired()
-                        .HasColumnType("varchar(1000)");
+                        .IsRequired();
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(30)")
+                        .HasColumnType("varchar(15)")
                         .HasMaxLength(30);
 
                     b.Property<DateTime>("StartDate");
@@ -161,7 +161,7 @@ namespace CPMS.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(20)")
+                        .HasColumnType("varchar(15)")
                         .HasMaxLength(30);
 
                     b.Property<int?>("ProjectId");

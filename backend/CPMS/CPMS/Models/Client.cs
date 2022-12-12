@@ -14,29 +14,36 @@ namespace CPMS.Models
         public int Id { get; set; }
 
         [MaxLength(30)]
+        [Column(TypeName = "varchar(15)")]
         public string Name { get; set; }
 
         [MaxLength(30)]
         [DataType(DataType.EmailAddress)]
+        [Column(TypeName = "varchar(30)")]
         public string Email { get; set; }
 
         [ MaxLength(10)]
         [DataType(DataType.Password)]
+        [Column(TypeName = "varchar(8)")]
         public string Password { get; set; }
 
         [MaxLength(10)]
+        [Column(TypeName = "varchar(11)")]
         public string Phone { get; set; }
 
         [ MaxLength(30)]
-        
+        [Column(TypeName = "varchar(10)")]
         public string Organization { get; set; }
 
         [MaxLength(100)]
+        [Column(TypeName = "varchar(50)")]
         public string ProfileImageName { get; set; }
         [MaxLength(100)]
+        [Column(TypeName = "varchar(50)")]
         public string AgreementPaperName { get; set; }
 
         [MaxLength(10)]
+        [Column(TypeName = "varchar(8)")]
         public string Role { get; set; }
 
         //public List<Project> Projects { get; set; }

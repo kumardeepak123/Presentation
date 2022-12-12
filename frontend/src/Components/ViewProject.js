@@ -166,7 +166,27 @@ const {id}= useParams();
                             <p style={{color:'red'}}>No Teams assigned</p>
                           )
                         }
-                    
+                    <MDBRow className="pt-1">
+                          <MDBCol size="6" className="mb-3">
+                            <MDBTypography tag="h6">Status</MDBTypography> 
+                            {project.status === 'Active' &&
+                              <MDBCardText className="text-success ">{project.status}</MDBCardText>
+                            }
+                            {project.status === 'Cancelled' &&
+                              <MDBCardText className="text-danger ">{project.status}</MDBCardText>
+                            }
+                            {project.status === 'On hold' &&
+                              <MDBCardText className="text-warning ">{project.status}</MDBCardText>
+
+                            }
+                            {project.status === 'Completed' &&
+                              <MDBCardText className="text-success ">{project.status}</MDBCardText>
+                            }
+                            
+                          </MDBCol>
+                          
+                          
+                    </MDBRow>
                     <button className="btn btn-secondary mt-2"  onClick={()=>{navigate(`/admin/projects`)}} >Back</button>
                   </MDBCardBody>
                 </MDBCol>

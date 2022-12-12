@@ -6,6 +6,7 @@ C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcor
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS-Test.runtimeconfig.json
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS-Test.runtimeconfig.dev.json
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS-Test.dll
+C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS-Test.pdb
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS.dll
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS.pdb
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcoreapp2.1\CPMS-Test.csprojAssemblyReference.cache
@@ -13,6 +14,5 @@ C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcor
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcoreapp2.1\CPMS-Test.AssemblyInfoInputs.cache
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcoreapp2.1\CPMS-Test.AssemblyInfo.cs
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcoreapp2.1\CPMS-Test.csproj.CopyComplete
-C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\bin\Debug\netcoreapp2.1\CPMS-Test.pdb
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcoreapp2.1\CPMS-Test.dll
 C:\Users\1000074028\Desktop\CPMS_Project\backend\CPMS\CPMS-Test\obj\Debug\netcoreapp2.1\CPMS-Test.pdb

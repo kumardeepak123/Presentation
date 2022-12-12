@@ -31,7 +31,8 @@ namespace CPMS.Repository
                 Budget = project.Budget,
                 StartDate = project.StartDate,
                 EndDate = project.EndDate,
-                Technology = project.Technology
+                Technology = project.Technology,
+                Status = "Active"
             };
             cPMDbContext.Projects.Add(_Project) ;
 
@@ -102,6 +103,7 @@ namespace CPMS.Repository
                 FRequirement = x.FRequirement,
                 NFRequirement = x.NFRequirement,
                 Technology = x.Technology,
+                Status = x.Status,
                 Teams = x.Teams.Select(t => new Team {
                     Id= t.Id,
                     Name = t.Name,
@@ -116,15 +118,7 @@ namespace CPMS.Repository
         
         public async Task<List<Project>> GetProjectsUnderClient(int id)
         {
-            /*var _Client_projects = await cPMDbContext.Client_Projects.Where(x => x.ClientId == id).ToListAsync();
-            List<Project> _Projects = new List<Project>();
-            foreach(var r in _Client_projects)
-            {
-                var _Project = await cPMDbContext.Projects.Where(x => x.Id == r.ProjectId).FirstOrDefaultAsync();
-                _Projects.Add(_Project);
-            }
-
-            return _Projects;*/
+           
             var _Client = await cPMDbContext.Clients.Where(x => x.Id == id).Select(x=> new Client { 
                 Id = x.Id,
                 Client_Projects= x.Client_Projects
@@ -140,7 +134,8 @@ namespace CPMS.Repository
                     Budget =x.Budget,
                     StartDate =x.StartDate,
                     EndDate =x.EndDate,
-                    Technology =x.Technology
+                    Technology =x.Technology,
+                    Status = x.Status
                 }).FirstOrDefaultAsync();
                 _Projects.Add(_Project);
             }
@@ -157,7 +152,8 @@ namespace CPMS.Repository
                 FRequirement=x.FRequirement,
                 NFRequirement= x.NFRequirement,
                 Budget= x.Budget,
-                Technology =x.Technology
+                Technology =x.Technology,
+                Status =x.Status
             }).ToListAsync();
 
             HashSet<int> _ProjectIds = new HashSet<int>();
@@ -200,6 +196,7 @@ namespace CPMS.Repository
             proj.Name = project.Name;
             proj.Technology = project.Technology;
             proj.Budget = project.Budget;
+            proj.Status = project.Status;  //CHANGE
 
             cPMDbContext.Projects.Update(proj);
             var _Teams = await  cPMDbContext.Teams.Where(t => t.ProjectId == id).ToListAsync();
