@@ -29,7 +29,8 @@ const EditProject=()=>{
       "fRequirement":"",
       "budget": 0,
       "client_Projects": null,
-      "teams": []      
+      "teams": [],
+      "status":""      
     
     });
     const [selectedOption, setSelectedOption] = useState(null);
@@ -307,6 +308,27 @@ const EditProject=()=>{
                     </MDBCol>
                        
                   </MDBRow> */}
+                  <MDBRow className='align-items-center pt-4 pb-3'>
+    
+    <MDBCol md='3' className='ps-5'>
+      <h6 className="mb-0">Status</h6>
+    </MDBCol>
+
+    
+    <MDBCol md='9' className='pe-5'>
+                    {/* <MDBInput  size='lg'  type='text' value={employee.designation} onChange={handleChange("designation")}/> */}
+                    <select onChange={handleChange("status")}>
+                        <option >Select..</option>
+                        <option value="Active">Active</option>
+                        <option value="On hold" >On hold</option>
+                        <option value="Cancelled" >Cancelled</option>
+                        <option value="Completed" >Completed</option>
+                       
+                    </select>
+    </MDBCol>
+    
+
+  </MDBRow>
     
                   <button className='btn btn-lg btn-primary mr-3'  onClick={editProject}>Edit</button>
                   <button className='btn btn-lg btn-secondary'  onClick={()=>{navigate(`/admin/projects`)}}>Cancel</button>

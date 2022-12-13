@@ -198,6 +198,23 @@ namespace CPMS.Repository
             proj.Budget = project.Budget;
             proj.Status = project.Status;  //CHANGE
 
+            if(proj.Status == "Completed" || proj.Status == "Cancelled")
+            {
+                var _TeamsInfo = await cPMDbContext.Teams.Where(t => t.ProjectId == id).ToListAsync();
+                foreach(var t in _TeamsInfo)
+                {
+                    var _Emps = await cPMDbContext.Employees.Where(x => x.TeamId == t.Id).ToListAsync();
+                    foreach(var e in _Emps)
+                    {
+                        e.TeamId = null;
+                        cPMDbContext.Employees.Update(e);
+
+                    }
+                    cPMDbContext.Teams.Remove(t);
+                }
+
+            }
+
             cPMDbContext.Projects.Update(proj);
             var _Teams = await  cPMDbContext.Teams.Where(t => t.ProjectId == id).ToListAsync();
             foreach(var t in _Teams)

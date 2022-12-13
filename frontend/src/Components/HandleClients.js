@@ -16,7 +16,7 @@ const HandleClients=()=>{
     //  Pagination Logic
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
-    const[itemsPerPage,setItemsPerPage]= useState(5);
+    const[itemsPerPage,setItemsPerPage]= useState(3);
 
      const navigate = useNavigate();
 
@@ -57,6 +57,10 @@ const HandleClients=()=>{
       }
 
       const onChangeHandler=name=>(event)=>{
+          if(name === "itemsPerPage"){
+            setItemsPerPage(parseInt(event.target.value));
+            return;
+          }
           if(name === "searchBy"){
             setSearchBy(event.target.value);
             return;
@@ -109,12 +113,21 @@ const HandleClients=()=>{
         <option  value="email asc">email ascending</option>
         <option  value="email desc">email descending</option>
         </select>
+
+        
           <div style={{display:'flex'}}>
             <input class="form-control mr-sm-2" type="search Client" onChange={onChangeHandler("searchBy")} placeholder="Search" aria-label="Search"/>
             <button class="btn btn-outline-success my-2 my-sm-0" onClick={searchEmployee} >Search</button>
           </div>
         <button className="btn btn-success" onClick={()=>{navigate(`/admin/create/client`)}}>Add Client</button>
         </nav>
+        <select id="records per page"  onChange={onChangeHandler("itemsPerPage")}>
+        
+        <option  value="3">3</option>
+        <option  value="5">5</option>
+        <option  value="10">10</option>
+        <option  value="15">15</option>
+        </select>
         <table class="table table-hover  table-striped  ">
             <thead>
             <tr>

@@ -163,24 +163,24 @@ const {id}= useParams();
                               </ul>
                           )
                           ):(
-                            <p style={{color:'red'}}>No Teams assigned</p>
+                            <p style={{color:'red'}}>No Teams</p>
                           )
                         }
                     <MDBRow className="pt-1">
                           <MDBCol size="6" className="mb-3">
                             <MDBTypography tag="h6">Status</MDBTypography> 
                             {project.status === 'Active' &&
-                              <MDBCardText className="text-success ">{project.status}</MDBCardText>
+                              <MDBCardText className="text-success font-weight-bold">{project.status}</MDBCardText>
                             }
                             {project.status === 'Cancelled' &&
-                              <MDBCardText className="text-danger ">{project.status}</MDBCardText>
+                              <MDBCardText className="text-danger font-weight-bold">{project.status}</MDBCardText>
                             }
                             {project.status === 'On hold' &&
-                              <MDBCardText className="text-warning ">{project.status}</MDBCardText>
+                              <MDBCardText className="text-warning font-weight-bold">{project.status}</MDBCardText>
 
                             }
                             {project.status === 'Completed' &&
-                              <MDBCardText className="text-success ">{project.status}</MDBCardText>
+                              <MDBCardText className="text-success font-weight-bold">{project.status}</MDBCardText>
                             }
                             
                           </MDBCol>
