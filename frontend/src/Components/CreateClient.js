@@ -53,7 +53,7 @@ const CreateClient=()=>{
     }
     
     const loadProjects=async()=>{
-      await fetch(`http://localhost:44327/api/Project/all-projects`,{
+      await fetch(`http://localhost:44327/api/Project/projects-for-assignment`,{
             headers:{
               Authorization: `Bearer ${user.token}`
             }

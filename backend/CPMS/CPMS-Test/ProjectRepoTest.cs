@@ -135,8 +135,7 @@ namespace Tests
                     Phone="9668855719",
                     Organization="hexaware",
                     ProfileImageName="profile1.png",
-                    AgreementPaperName="agree1.pdf",
-                    Role="Client"
+                    AgreementPaperName="agree1.pdf"
                 },
                  new Client
                 {
@@ -147,8 +146,7 @@ namespace Tests
                     Phone="5268956235",
                     Organization="hexaware",
                     ProfileImageName="profile2.png",
-                    AgreementPaperName="agree2.pdf",
-                    Role="Admin"
+                    AgreementPaperName="agree2.pdf"
                 },
                   new Client
                 {
@@ -159,8 +157,8 @@ namespace Tests
                     Phone="5623895623",
                     Organization="hexaware",
                     ProfileImageName="profile3.png",
-                    AgreementPaperName="agree3.pdf",
-                    Role="Client"
+                    AgreementPaperName="agree3.pdf"
+                   
                 }
             };
 

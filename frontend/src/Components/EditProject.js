@@ -330,7 +330,7 @@ const EditProject=()=>{
 
   </MDBRow>
     
-                  <button className='btn btn-lg btn-primary mr-3'  onClick={editProject}>Edit</button>
+                  <button className='btn btn-lg btn-primary mr-3'  onClick={editProject}>Save</button>
                   <button className='btn btn-lg btn-secondary'  onClick={()=>{navigate(`/admin/projects`)}}>Cancel</button>
                   
                 </MDBCardBody>

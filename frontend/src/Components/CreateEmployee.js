@@ -86,7 +86,7 @@ const CreateEmployee=()=>{
          .then(res=>res.json())
          .then(res=>{
             
-            toast.success("Client created successfully !", {
+            toast.success("Employee created successfully !", {
                 position: toast.POSITION.TOP_RIGHT
               });
             setEmployee({

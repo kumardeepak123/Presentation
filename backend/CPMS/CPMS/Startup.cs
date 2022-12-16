@@ -66,9 +66,9 @@ namespace CPMS
             services.AddScoped<IProjectRepo, ProjectRepo>();
             services.AddScoped<IEmployeeRepo, EmployeeRepo>();
             services.AddScoped<ITeamRepo, TeamRepo>();
-
+            services.AddScoped<IAdminRepo, AdminRepo>();
             //services.AddCors();
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

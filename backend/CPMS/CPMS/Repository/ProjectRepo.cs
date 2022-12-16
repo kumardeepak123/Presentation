@@ -144,7 +144,7 @@ namespace CPMS.Repository
         }
 
         
-        public async Task<List<Project>> GetProjectsForAssignmentToClient(int id)
+        public async Task<List<Project>> GetProjectsForAssignmentToClient()
         {
             var projects = await cPMDbContext.Projects.Select(x=> new Project { 
                 Id= x.Id,
@@ -161,10 +161,9 @@ namespace CPMS.Repository
 
             foreach(var e in _ClientProjects)
             {
-                if(e.ClientId == id)
-                {
+                
                     _ProjectIds.Add((int)e.ProjectId);
-                }
+                
             }
             if(_ProjectIds.Count == 0)
             {
@@ -179,7 +178,8 @@ namespace CPMS.Repository
                 FRequirement = x.FRequirement,
                 NFRequirement = x.NFRequirement,
                 Budget = x.Budget,
-                Technology = x.Technology
+                Technology = x.Technology,
+                Status = x.Status
             }).ToListAsync();
         }
 

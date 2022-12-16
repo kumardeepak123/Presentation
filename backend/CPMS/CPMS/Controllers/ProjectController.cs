@@ -102,11 +102,11 @@ namespace CPMS.Controllers
             return Ok(projects);
         }
 
-        [HttpGet("projects-for-assignment/{id}")]
+        [HttpGet("projects-for-assignment")]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<IEnumerable<Project>>> GetProjectsForAssignmentToClient(int id)
+        public async Task<ActionResult<IEnumerable<Project>>> GetProjectsForAssignmentToClient()
         {
-            var projects = await _IProjectRepo.GetProjectsForAssignmentToClient(id);
+            var projects = await _IProjectRepo.GetProjectsForAssignmentToClient();
             if (projects == null)
             {
                 return NotFound();

@@ -33,7 +33,7 @@ const AdminProfile=()=>{
         navigate("/login");
       }
 
-     fetch(`http://localhost:44327/api/Client/client-details/${user.userId}`,{
+     fetch(`http://localhost:44327/api/Admin/admin-details/${user.userId}`,{
         headers:{
             "Authorization" : `Bearer ${user.token}`
         }

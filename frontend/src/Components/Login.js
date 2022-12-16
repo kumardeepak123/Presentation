@@ -62,7 +62,7 @@ function Login (){
        setError(false);
        setErrorMessage('');
 
-      var res =  await fetch("http://localhost:44327/api/Client/signin?email="+email+"&password="+password,{
+      var res =  await fetch("http://localhost:44327/api/Admin/admin-signin?email="+email+"&password="+password,{
         
         method:"POST",
         headers:{

@@ -20,6 +20,7 @@ namespace CPMS.DBConnect
         public DbSet<Client_Project> Client_Projects { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
     }
 }

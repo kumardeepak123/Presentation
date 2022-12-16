@@ -27,7 +27,6 @@ namespace CPMS.Repository
                 Password = client.Password,
                 Phone = client.Phone,
                 Organization = client.Organization,
-                Role = client.Role,
                 AgreementPaperName = client.AgreementPaperName,
                 ProfileImageName = client.ProfileImageName
             };
@@ -175,7 +174,7 @@ namespace CPMS.Repository
             dbClient.Organization = client.Organization;
             dbClient.ProfileImageName = client.ProfileImageName;
             dbClient.AgreementPaperName = client.AgreementPaperName;
-            dbClient.Role = client.Role;
+            
 
             var _Client_Projects = await cPMDbContext.Client_Projects.Where(x => x.ClientId == id).ToListAsync();
             foreach (var r in _Client_Projects)

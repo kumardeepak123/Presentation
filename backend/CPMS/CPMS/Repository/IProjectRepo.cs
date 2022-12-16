@@ -15,7 +15,7 @@ namespace CPMS.Repository
         Task<bool> UpdateProject(int id, Project project, int[] TeamIds); //DONE
         Task<bool> DeleteProject(int id); //DONE
         Task<List<Project>> GetProjectsUnderClient(int id); //DONE
-        Task<List<Project>> GetProjectsForAssignmentToClient(int id); //DONE Id refers to client id
+        Task<List<Project>> GetProjectsForAssignmentToClient(); //DONE Id refers to client id
 
 
        /* Task<Demo> ProjectName_WithClientName(int id);*/

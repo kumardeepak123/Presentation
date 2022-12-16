@@ -83,7 +83,7 @@ namespace CPMS.Controllers
         {
             var clients = await _IClientRepo.getAllClients(sortBy, orderBy, searchByName);
 
-            var res = clients.Where(x => x.Role == "Client").Select(client => new
+            var res = clients.Select(client => new
             {
                 Id = client.Id,
                 Name = client.Name,
@@ -94,7 +94,7 @@ namespace CPMS.Controllers
                 AgreementPaperName = client.AgreementPaperName,
                 ProfileImageSrc = String.Format("{0}://{1}{2}/UploadFiles/{3}", Request.Scheme, Request.Host, Request.PathBase, client.ProfileImageName),
                 AgreementPaperSrc = String.Format("{0}://{1}{2}/UploadFiles/{3}", Request.Scheme, Request.Host, Request.PathBase, client.AgreementPaperName),
-                Role = client.Role
+                
             }).ToList();
 
             return Ok(res);
@@ -120,7 +120,7 @@ namespace CPMS.Controllers
                 {
                     message = "SignIn successfull",
                     UserId = user.Id,
-                    Role = user.Role,
+                    Role = "Client",
                     Token = token
                 });
             }
@@ -138,7 +138,7 @@ namespace CPMS.Controllers
             {
                  new Claim(ClaimTypes.NameIdentifier, user.Name),
                  new Claim(ClaimTypes.Email, user.Email),
-                 new Claim(ClaimTypes.Role, user.Role)
+                 new Claim(ClaimTypes.Role, "Client")
              };
 
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],

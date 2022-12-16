@@ -329,7 +329,7 @@ const EditClient=()=>{
     
                   </MDBRow>
 
-                  <MDBRow className='align-items-center pt-4 pb-3'>
+                  {/* <MDBRow className='align-items-center pt-4 pb-3'>
     
                     <MDBCol md='3' className='ps-5'>
                       <h6 className="mb-0">Edit Projects</h6>
@@ -342,7 +342,7 @@ const EditClient=()=>{
                         isMulti />
                     </MDBCol>
                        
-                  </MDBRow>
+                  </MDBRow> */}
                   
                     
 

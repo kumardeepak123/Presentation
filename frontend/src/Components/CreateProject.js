@@ -77,7 +77,7 @@ const CreateProject=()=>{
     const addProject=()=>{
         if(project.name===""|| project.startDate===""|| project.endDate==="" ||
         project.budget===""|| project.technology===""|| project.fRequirement===""
-        ||project.nfRequirement==="")
+        ||project.nfRequirement==="" || selectedOption === null)
         {
           toast.error("Please include all the fields", {
             position: toast.POSITION.TOP_RIGHT
